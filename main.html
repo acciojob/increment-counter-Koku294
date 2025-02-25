@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Increment Counter</title>
-  <style>
-    #counter {
-      font-size: 24px;
-      margin-bottom: 10px;
-	  color:red;
-	}
-    #incrementBtn {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-		background-color: magenta;
-    }
-  </style>
+  <title>Counter App</title>
 </head>
 <body>
-
-  <p id="counter">0</p>
+  <div id="counter">0</div>
   <button id="incrementBtn">Increment</button>
-	  <script src="script.js"></script>
-	
+
+  <script>
+    const counterElement = document.getElementById("counter");
+    const incrementButton = document.getElementById("incrementBtn");
+
+    // Initialize counter value
+    let counter = 0;
+
+    // Function to handle button click
+    incrementButton.addEventListener("click", () => {
+      // Display alert with the current counter value (before increment)
+      alert(`Current value: ${counter}`);
+
+      // Increment the counter
+      counter++;
+
+      // Update the displayed counter value
+      counterElement.textContent = counter;
+    });
+  </script>
 </body>
 </html>
-
